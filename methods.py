@@ -5,7 +5,7 @@ def readNumbers():
         data = json.load(json_data)
         total = sum(data.values())
         for d in data:
-            percentage = str( round( (data[d] / total * 100), 1)) + "%"
+            percentage = str( round( (data[d] / total * 100), 1)) + "%" + f" ({data[d]})"
             data[d] = percentage 
         data_with_percentage = json.dumps(data, indent = 4)
         print(data_with_percentage)
